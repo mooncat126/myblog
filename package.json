@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@nuxt/content": "^2.1.1",
+    "yarn": "^1.22.19"
+  }
+}
