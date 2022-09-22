@@ -1,8 +1,23 @@
 {
-  "NuxtLogo": {
-    "description": "Auto imported from components/NuxtLogo.vue"
+  "InfoBox": {
+    "description": "Auto imported from components/global/InfoBox.vue"
   },
-  "Tutorial": {
-    "description": "Auto imported from components/Tutorial.vue"
+  "PrevNext": {
+    "description": "Auto imported from components/global/PrevNext.vue"
+  },
+  "AppCard": {
+    "description": "Auto imported from components/AppCard.vue"
+  },
+  "AppSearchInput": {
+    "description": "Auto imported from components/AppSearchInput.vue"
+  },
+  "Author": {
+    "description": "Auto imported from components/Author.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "TheHeader": {
+    "description": "Auto imported from components/TheHeader.vue"
   }
 }

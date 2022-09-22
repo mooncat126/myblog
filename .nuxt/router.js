@@ -4,7 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _34b5e49d = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _5c4e6f9d = () => interopDefault(import('../pages/blog/author/_author.vue' /* webpackChunkName: "pages/blog/author/_author" */))
+const _69534832 = () => interopDefault(import('../pages/blog/tag/_tag.vue' /* webpackChunkName: "pages/blog/tag/_tag" */))
+const _aa3bc73a = () => interopDefault(import('../pages/blog/_slug.vue' /* webpackChunkName: "pages/blog/_slug" */))
+const _2ead2c3c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -18,8 +21,20 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/blog/author/:author?",
+    component: _5c4e6f9d,
+    name: "blog-author-author"
+  }, {
+    path: "/blog/tag/:tag?",
+    component: _69534832,
+    name: "blog-tag-tag"
+  }, {
+    path: "/blog/:slug?",
+    component: _aa3bc73a,
+    name: "blog-slug"
+  }, {
     path: "/",
-    component: _34b5e49d,
+    component: _2ead2c3c,
     name: "index"
   }],
 

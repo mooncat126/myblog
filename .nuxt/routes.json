@@ -1,9 +1,26 @@
 [
   {
+    "name": "blog-author-author",
+    "path": "/blog/author/:author?",
+    "component": "/Users/kisky/Desktop/repo/myblog/pages/blog/author/_author.vue",
+    "chunkName": "pages/blog/author/_author"
+  },
+  {
+    "name": "blog-tag-tag",
+    "path": "/blog/tag/:tag?",
+    "component": "/Users/kisky/Desktop/repo/myblog/pages/blog/tag/_tag.vue",
+    "chunkName": "pages/blog/tag/_tag"
+  },
+  {
+    "name": "blog-slug",
+    "path": "/blog/:slug?",
+    "component": "/Users/kisky/Desktop/repo/myblog/pages/blog/_slug.vue",
+    "chunkName": "pages/blog/_slug"
+  },
+  {
     "name": "index",
     "path": "/",
-    "component": "/Users/kisky/Desktop/myblog/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_34b5e49d"
+    "component": "/Users/kisky/Desktop/repo/myblog/pages/index.vue",
+    "chunkName": "pages/index"
   }
 ]

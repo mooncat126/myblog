@@ -12,8 +12,9 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_894b586a from 'nuxt_plugin_plugin_894b586a' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_antdui_2b2dca90 from 'nuxt_plugin_antdui_2b2dca90' // Source: ../plugins/antd-ui (mode: 'all')
+import nuxt_plugin_plugin_85933a68 from 'nuxt_plugin_plugin_85933a68' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_pluginclient_a01c2f70 from 'nuxt_plugin_pluginclient_a01c2f70' // Source: ./content/plugin.client.js (mode: 'client')
+import nuxt_plugin_pluginserver_15ab59d0 from 'nuxt_plugin_pluginserver_15ab59d0' // Source: ./content/plugin.server.js (mode: 'server')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -53,7 +54,7 @@ Object.defineProperty(Vue.prototype, '$nuxt', {
 
 Vue.use(Meta, {"keyName":"head","attribute":"data-n-head","ssrAttribute":"data-n-head-ssr","tagIDKeyName":"hid"})
 
-const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
+const defaultTransition = {"name":"page","mode":"out-in","appear":false,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
 
 async function createApp(ssrContext, config = {}) {
   const router = await createRouter(ssrContext, config)
@@ -63,7 +64,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"myblog","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"nuxt-content-article","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"## Build Setup"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -177,12 +178,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_894b586a === 'function') {
-    await nuxt_plugin_plugin_894b586a(app.context, inject)
+  if (typeof nuxt_plugin_plugin_85933a68 === 'function') {
+    await nuxt_plugin_plugin_85933a68(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_antdui_2b2dca90 === 'function') {
-    await nuxt_plugin_antdui_2b2dca90(app.context, inject)
+  if (process.client && typeof nuxt_plugin_pluginclient_a01c2f70 === 'function') {
+    await nuxt_plugin_pluginclient_a01c2f70(app.context, inject)
+  }
+
+  if (process.server && typeof nuxt_plugin_pluginserver_15ab59d0 === 'function') {
+    await nuxt_plugin_pluginserver_15ab59d0(app.context, inject)
   }
 
   // Lock enablePreview in context
