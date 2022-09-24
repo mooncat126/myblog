@@ -3,11 +3,12 @@ title: Great Article
 description: I am a description of a great article
 img: https://chiyoku.com/assets/uploads/2021/06/Vermeer-delft.jpg
 alt: nice image
+imgcontent: ssssssssssssss
 author: 
   name: XiangYu
   bio: All about Maria and where she works and what she does
 tags: 
-  - web development
+  - frontend
 ---
 ## Hello 
 

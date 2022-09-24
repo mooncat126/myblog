@@ -2,15 +2,15 @@
   <div class="xs:m-8 md:my-12 md:mx-48">
     <TheHeader />
     <div class="border-b border-gray-300">
-      <ul class="flex flex-wrap mb-4 text-center">
+      <ul class="flex flex-wrap mb-4 md:text-center sm:text-left">
         <li
           v-for="tag of tags"
           :key="tag.slug"
-          class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
+          class="xs:w-full md:w-1/3 lg:flex-1 px-2 md:text-center sm:text-left"
         >
           <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
             <p
-              class="font-bold text-gray-600 uppercase tracking-wider font-medium text-ss"
+              class="font-bold text-gray-600 uppercase tracking-wider font-medium text-ss hover:opacity-75"
             >
               {{ tag.name }}
             </p>
@@ -23,11 +23,11 @@
       <li
         v-for="article of articles"
         :key="article.slug"
-        class="w-full md:w-1/2 px-2 xs:mb-6 md:mb-12 article-card"
+        class="w-full md:w-1/2 px-2 xs:mb-6 md:mb-24 article-card"
       >
         <NuxtLink
           :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-          class="flex transition-shadow duration-150 ease-in-out shadow-md hover:shadow-xl xxlmax:flex-col"
+          class="flex transition-shadow duration-150 ease-in-out shadow-md hover:opacity-75 xxlmax:flex-col"
         >
           <img
             v-if="article.img"
@@ -61,7 +61,7 @@ export default {
       .sortBy('createdAt', 'desc')
       .fetch()
     const tags = await $content('tags')
-      .only(['name', 'description', 'img', 'slug'])
+      .only(['name', 'description', 'img', 'imgcontent', 'slug'])
       .sortBy('createdAt', 'asc')
       .fetch()
     return {

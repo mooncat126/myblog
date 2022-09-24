@@ -22,7 +22,7 @@
         <span v-for="(tag, id) in article.tags" :key="id">
           <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
             <span
-              class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 transition-colors duration-300 ease-linear bg-gray-700 text-gray-500 opacity-85 hover:bg-gray-500 hover:text-white"
+              class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full block mr-2 mb-2 mt-10 bg-gray-400 text-gray-600 hover:opacity-75"
             >
               {{ tags[tag].name }}
             </span>
@@ -32,7 +32,7 @@
       <div class="flex absolute top-3rem right-3rem">
         <NuxtLink
           to="/"
-          class="mr-8 self-center text-white font-bold hover:underline"
+          class="mr-8 self-center text-white font-bold hover:opacity-75"
         >
           All articles
         </NuxtLink>
@@ -57,7 +57,7 @@
           >
             <nuxtLink
               :to="`#${link.id}`"
-              class="hover:underline"
+              class="hover:opacity-75"
               :class="{
                 'py-2': link.depth === 2,
                 'ml-2 pb-2': link.depth === 3

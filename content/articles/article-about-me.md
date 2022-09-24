@@ -3,12 +3,13 @@ title: Article about me
 description: This is a description for the article about me
 img: https://chiyoku.com/assets/uploads/2021/05/Babel.jpg
 alt: nice image
+imgcontent: ssssssssssssss
 author:
   name: XiangYu
   bio: All about Peter and what he does and where he works
   img: https://images.unsplash.com/photo-1533636721434-0e2d61030955?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
 tags:
-  - web development
+  - setting
 ---
 ## There is a test
 

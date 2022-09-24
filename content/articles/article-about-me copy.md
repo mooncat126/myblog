@@ -3,6 +3,7 @@ title: Article about me
 description: This is a description for the article about me
 img: https://chiyoku.com/assets/uploads/2021/05/Babel.jpg
 alt: nice image
+imgcontent: ssssssssssssss
 author:
   name: XiangYu
   bio: All about Peter and what he does and where he works

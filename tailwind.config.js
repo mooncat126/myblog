@@ -43,7 +43,7 @@ module.exports = {
       },
       margin: {
         '-fullh': '-100vh'
-      }
+      },
     },
     inset: {
       '0': 0,
