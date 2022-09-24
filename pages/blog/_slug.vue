@@ -22,7 +22,7 @@
         <span v-for="(tag, id) in article.tags" :key="id">
           <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
             <span
-              class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+              class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 transition-colors duration-300 ease-linear bg-gray-700 text-gray-500 opacity-85 hover:bg-gray-500 hover:text-white"
             >
               {{ tags[tag].name }}
             </span>
@@ -36,12 +36,6 @@
         >
           All articles
         </NuxtLink>
-        <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-          class="mr-8 self-center text-white font-bold hover:underline"
-        >
-          Tutorial
-        </a>
         <AppSearchInput />
       </div>
     </div>
