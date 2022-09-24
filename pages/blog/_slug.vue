@@ -9,7 +9,7 @@
         class="absolute h-full w-full object-cover"
       />
       <div class="overlay"></div>
-      <div class="absolute top-32 left-32 text-white">
+      <div class="absolute top-32 left-32 text-gray">
         <NuxtLink to="/"><Logo /></NuxtLink>
         <div class="mt-16 -mb-3 flex uppercase text-sm">
           <p class="mr-3">
@@ -124,7 +124,7 @@ export default {
   font-size: 22px;
 }
 .icon.icon-link {
-  background-image: url('~assets/svg/icon-hashtag.svg');
+  background-image: url('~assets/svg/icon.png');
   display: inline-block;
   width: 20px;
   height: 20px;

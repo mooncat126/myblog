@@ -49,19 +49,7 @@
     </ul>
     <footer class="flex justify-center border-gray-500 border-t-2">
       <p class="mt-4">
-        Created by
-        <a
-          href="https://twitter.com/debs_obrien"
-          class="font-bold hover:underline"
-          >Debbie O'Brien</a
-        >
-        at NuxtJS. See the
-        <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-          class="font-bold hover:underline"
-          >tutorial</a
-        >
-        for how to build it.
+        Created by XiangYu @2022
       </p>
     </footer>
   </div>
@@ -91,8 +79,8 @@ export default {
   border-radius: 8px;
 }
 .article-card a {
-  background-color: #fff;
-  border-radius: 8px;
+  background-color: #fafafa96;
+  border-radius: 10px;
 }
 .article-card img div {
   border-radius: 8px 0 0 8px;
