@@ -1,17 +1,34 @@
 <template>
-  <div class="m-8">
+  <div class="xs:m-8 md:my-12 md:mx-48">
     <TheHeader />
-
+    <div>
+    <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
+    <ul class="flex flex-wrap mb-4 text-center">
+      <li
+        v-for="tag of tags"
+        :key="tag.slug"
+        class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
+      >
+        <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
+          <p
+            class="font-bold text-gray-600 uppercase tracking-wider font-medium text-ss"
+          >
+            {{ tag.name }}
+          </p>
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
     <h1 class="font-bold text-4xl mb-10">Blog Posts</h1>
     <ul class="flex flex-wrap">
       <li
         v-for="article of articles"
         :key="article.slug"
-        class="xs:w-full md:w-1/2 px-2 xs:mb-6 md:mb-12 article-card"
+        class="w-full md:w-1/2 px-2 xs:mb-6 md:mb-12 article-card"
       >
         <NuxtLink
           :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-          class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+          class="flex transition-shadow duration-150 ease-in-out shadow-md hover:shadow-xl xxlmax:flex-col"
         >
           <img
             v-if="article.img"
@@ -28,22 +45,6 @@
               {{ article.description }}
             </p>
           </div>
-        </NuxtLink>
-      </li>
-    </ul>
-    <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
-    <ul class="flex flex-wrap mb-4 text-center">
-      <li
-        v-for="tag of tags"
-        :key="tag.slug"
-        class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
-      >
-        <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
-          <p
-            class="font-bold text-gray-600 uppercase tracking-wider font-medium text-ss"
-          >
-            {{ tag.name }}
-          </p>
         </NuxtLink>
       </li>
     </ul>

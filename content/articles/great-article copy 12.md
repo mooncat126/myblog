@@ -1,7 +1,7 @@
 ---
 title: Great Article
 description: I am a description of a great article
-img: https://chiyoku.com/assets/uploads/2021/06/Manet-grass.jpg
+img: https://chiyoku.com/assets/uploads/2021/06/Vermeer-delft.jpg
 alt: nice image
 author: 
   name: XiangYu

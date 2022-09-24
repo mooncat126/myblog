@@ -118,7 +118,7 @@ export default {
   font-size: 22px;
 }
 .icon.icon-link {
-  background-image: url('~assets/svg/icon.png');
+  background-image: url('~assets/svg/icon.svg');
   display: inline-block;
   width: 20px;
   height: 20px;
