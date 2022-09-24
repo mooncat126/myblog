@@ -1,25 +1,24 @@
 <template>
   <div class="xs:m-8 md:my-12 md:mx-48">
     <TheHeader />
-    <div>
-    <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
-    <ul class="flex flex-wrap mb-4 text-center">
-      <li
-        v-for="tag of tags"
-        :key="tag.slug"
-        class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
-      >
-        <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
-          <p
-            class="font-bold text-gray-600 uppercase tracking-wider font-medium text-ss"
-          >
-            {{ tag.name }}
-          </p>
-        </NuxtLink>
-      </li>
-    </ul>
-  </div>
-    <h1 class="font-bold text-4xl mb-10">Blog Posts</h1>
+    <div class="border-b border-gray-300">
+      <ul class="flex flex-wrap mb-4 text-center">
+        <li
+          v-for="tag of tags"
+          :key="tag.slug"
+          class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
+        >
+          <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
+            <p
+              class="font-bold text-gray-600 uppercase tracking-wider font-medium text-ss"
+            >
+              {{ tag.name }}
+            </p>
+          </NuxtLink>
+        </li>
+      </ul>
+    </div>
+    <h1 class="font-bold text-4xl my-10">Blog Posts</h1>
     <ul class="flex flex-wrap">
       <li
         v-for="article of articles"
@@ -48,10 +47,8 @@
         </NuxtLink>
       </li>
     </ul>
-    <footer class="flex justify-center border-gray-500 border-t-2">
-      <p class="mt-4">
-        Created by XiangYu @2022
-      </p>
+    <footer class="flex justify-center border-gray-300 border-t">
+      <p class="mt-4 text-gray-500">Created by XiangYu @2022</p>
     </footer>
   </div>
 </template>
